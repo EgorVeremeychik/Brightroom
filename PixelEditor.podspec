@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "PixelEditor"
-  s.version = '0.2.0'
+  s.version = '0.2.7'
   s.summary = "The image editor and engine using CoreImage"
 
   s.homepage = "https://github.com/muukii/Pixel"
@@ -15,7 +15,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.ios.frameworks = ['UIKit', 'CoreImage']
 
-  s.resources = "Sources/PixelEditor/Media.xcassets"
+  s.resource_bundles = {
+    'Dummy' => []
+  }
   s.dependency 'PixelEngine', '~> 0.2.0'
 
   s.dependency 'TransitionPatch', '~> 1.0.0'
